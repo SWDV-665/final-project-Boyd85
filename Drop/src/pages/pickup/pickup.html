@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Picked Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="crecent"
+    refreshingText="Refreshing...">
+   </ion-refresher-content>
+
+  </ion-refresher>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items; let i = index">
+      <ion-item>
+        <h2><b>Said:</b> {{item.message}} <b>At location: </b>{{item.long}} - longitude,  {{item.lat}} - latitude</h2>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+
+</ion-content>

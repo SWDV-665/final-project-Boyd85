@@ -1,0 +1,7 @@
+{
+  "name": "Drop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
